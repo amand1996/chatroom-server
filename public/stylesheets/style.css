@@ -1,6 +1,10 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Roboto", Helvetica, Arial, sans-serif;
+  background-image: url(../images/greenbackground.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
 }
 
 a {
