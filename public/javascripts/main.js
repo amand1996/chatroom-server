@@ -1,4 +1,3 @@
-$(document).ready(function(){
-	$('#welcome').fadeIn("slow");
-	$('#welcome_title').fadeIn("slow");
+$("#submit_user").click(function(){
+    $("#welcome_title").slideDown();
 });
