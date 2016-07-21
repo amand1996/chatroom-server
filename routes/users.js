@@ -8,6 +8,7 @@ usersController.get('/', function(req, res) {
 
 usersController.get('/:user_name', function(req, res) {
     res.render('users', { user_name: req.params.user_name });
+    console.log(req.params.user_name + " entered the chatroom");
 });
 
 module.exports = usersController;
