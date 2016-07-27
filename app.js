@@ -8,12 +8,10 @@ var debug = require('debug')('my-application');
 var ejs = require('ejs');
 
 
-var users = require('./routes/users');
-var routes = require('./routes/index');
+var index = require('./routes/index');
 
 var app = express();
-app.use('/chat', users);
-app.use('/', routes);
+app.use('/', index);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -65,4 +63,14 @@ app.set('port', process.env.PORT || 3000);
 var server = app.listen(app.get('port'), function() {
   debug('Express server listening on port ' + server.address().port);
   console.log('Chatroom server started on port ' + server.address().port);
+});
+
+var io = require('socket.io')(server);
+
+io.on('connection', function(){
+    console.log("User Connected");
+});
+
+io.on('disconnect', function(){
+    console.log("User Disconnected");
 });
