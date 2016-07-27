@@ -1,6 +1,6 @@
-#Chatroom Server
+#Chatroom Server(Progressing...)
 
-##Chatroom Server based on Nodejs.
+Chatroom Server based on Nodejs.
 Made on ExpressJS platform
 
 Run as: node app
