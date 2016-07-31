@@ -81,7 +81,9 @@ body>h1 {
 
 #msg-container {
     width: 90%;
-    height: 70%;
+    height: 75%;
+    max-height: 75%;
+    overflow: auto;
     background-color: rgba(158, 158, 158, 0.27);
     border-radius: 6px;
     position: absolute;
