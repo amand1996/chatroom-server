@@ -1,19 +1,11 @@
+var socket = io();
 $(document).ready(function() {
-    $("#messageText").on('change', function() {
-        $("#sendBtn").on('click', function() {
-            var text = $("#messageText").val();
-            var str = "<p>" + text + "</p>";
-            $("#msg").append(str);
-            $("#messageText").val("");
-        });
+    $('#newMessageForm').on('submit', function() {
+        socket.emit('message', $('#newMessage').val());
+        $('#newMessage').val('');
+        return false;
     });
-
-    $("#messageText").keypress(function(e) {
-        if (e.which == 13) {
-            var text = $("#messageText").val();
-            var str = "<p>" + text + "</p>";
-            $("#msg").append(str);
-            $("#messageText").val("");
-        }
+    socket.on('message', function(msg) {
+        $('#messages').append($('<li>').text(msg));
     });
 });

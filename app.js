@@ -61,16 +61,19 @@ app.use(function(err, req, res, next) {
 app.set('port', process.env.PORT || 3000);
 
 var server = app.listen(app.get('port'), function() {
-  debug('Express server listening on port ' + server.address().port);
-  console.log('Chatroom server started on port ' + server.address().port);
+    debug('Express server listening on port ' + server.address().port);
+    console.log('Chatroom server started on port ' + server.address().port);
 });
 
 var io = require('socket.io')(server);
 
-io.on('connection', function(){
-    console.log("User Connected");
-});
-
-io.on('disconnect', function(){
-    console.log("User Disconnected");
+io.on('connection', function(socket) {
+    console.log('User connected');
+    socket.on('disconnect', function() {
+        console.log('User disconnected');
+    });
+    socket.on('message', function(msg) {
+        // console.log("Message: "+msg);
+        io.emit('message', msg);
+    })
 });

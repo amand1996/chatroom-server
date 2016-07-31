@@ -1,16 +1,91 @@
 body {
-  padding: 50px;
-  font: 14px "Roboto", Helvetica, Arial, sans-serif;
-  background-image: url(../images/greenbackground.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: white;
+    padding: 50px;
+    font: 14px "Roboto", Helvetica, Arial, sans-serif;
+    background-image: url(../images/friends.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
 }
 
 a {
-  color: #00B7FF;
+    color: #00B7FF;
 }
 
-h1{
-  color: white;
+div>h1,
+body>h1 {
+    color: white;
+}
+
+#newMessage {
+    width: 90%;
+}
+
+#newMessageForm {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+#messages {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#messages li {
+    padding: 5px 10px;
+    color: whitesmoke;
+    font-weight: bolder;
+}
+
+#messages li:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.26);
+    color: whitesmoke;
+    font-weight: bolder;
+    padding: 5px 10px;
+}
+
+#welcome-page {
+    width: 30em;
+    height: 30em;
+    background-color: rgba(158, 158, 158, 0.27);
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+}
+
+#user-name {
+    width: 50%;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#msg-container {
+    width: 90%;
+    height: 70%;
+    background-color: rgba(158, 158, 158, 0.27);
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#welcome_title{
+	position: fixed;
+    top: 0px;
 }

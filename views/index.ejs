@@ -1,33 +1,26 @@
 <html>
 
 <head>
-    <title>Chatroom</title>
+    <title>Chatterbox</title>
     <link rel="stylesheet" href="/stylesheets/style.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>    <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/javascripts/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="/javascripts/main.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <h1>Chatroom</h1>
-    <h3 id="welcome_title">Welcome to the Chatroom</h3>
-    <div id="msg" style="color:white;"></div>
-    <div class="container" style="position:absolute; bottom:1em;">
-    <div class="row" style="position:relative;">
-    	<div class="col-xs-10">
-    		<input class="form-control" id="messageText" placeholder="Type here..." type="text" style="width:100%;">
-    	</div>
-    	<div class="col-xs-2">
-    		<button class="btn btn-success" id="sendBtn">Send</button>
-    	</div>
-    </div>
-</div>
+    <h1 id="welcome_title">Welcome to the Chatterbox</h1>
+    <div id="msg-container"><ul id="messages"></ul></div>
+    <form role="form" class="form-inline" id="newMessageForm" action="">
+        <input class="form-control" placeholder="Type here..." id="newMessage" autocomplete="off" />
+        <button class="btn btn-success" type="submit" id="submitMessage">Send</button>
+    </form>
 </body>
 
 </html>
