@@ -68,9 +68,11 @@ var server = app.listen(app.get('port'), function() {
 var io = require('socket.io')(server);
 
 io.on('connection', function(socket) {
+    io.emit('userconnected');
     console.log('User connected');
     socket.on('disconnect', function() {
         console.log('User disconnected');
+        io.emit('userdisconnected');
     });
     socket.on('message', function(msg) {
         io.emit('message', msg);

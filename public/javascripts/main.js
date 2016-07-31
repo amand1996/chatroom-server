@@ -9,6 +9,12 @@ $(document).ready(function() {
     socket.on('message', function(msg) {
         $('#messages').append($('<li>').html(msg));
     });
+    socket.on('userconnected', function(){
+        $('#messages').append($('<li>').html("<p>1 member joined</p>"));
+    })
+    socket.on('userdisconnected', function(){
+        $('#messages').append($('<li>').html("<p>1 member left</p>"));
+    })
     $('#enter').on('click', function(){
         $('#user').hide();
         $('#index').show();
