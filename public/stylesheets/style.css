@@ -125,3 +125,7 @@ body>div>div>h1,body>div>h1 {
 #user {
     display: block;
 }
+
+div>div>div>ul>li>strong{
+    color:#000066;
+}
