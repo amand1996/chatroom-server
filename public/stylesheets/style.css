@@ -1,13 +1,9 @@
-body {
-    padding: 50px;
-    font: 14px "Roboto", Helvetica, Arial, sans-serif;
-    background-image: url(../images/friends.jpg);
+#main_div{
+	background-image: url(../images/friends.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
-    color: white;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
+    height:100%;
+    width:100%;
+    position:fixed;
 }
 
 a {
@@ -108,4 +104,11 @@ body>h1 {
 #user-name{
 	background-color:rgba(0, 0, 0, 0.40);
 	color: whitesmoke;
+}
+
+#chat-area {
+    padding-left: 50px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
 }
