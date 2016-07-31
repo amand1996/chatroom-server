@@ -23,7 +23,7 @@ body>div>div>h1,body>div>h1 {
 
 #newMessageForm {
     position: fixed;
-    bottom: 0px;
+    bottom: 0em;
     width: 100%;
 }
 
@@ -98,7 +98,7 @@ body>div>div>h1,body>div>h1 {
 
 #welcome_title {
     position: fixed;
-    top: 0px;
+    top: 0em;
 }
 
 #user-name:focus {
@@ -113,9 +113,9 @@ body>div>div>h1,body>div>h1 {
 
 #chat-area {
     padding-left: 50px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
+    padding-top: 0em;
+    padding-bottom: 0em;
+    margin-bottom: 0em;
 }
 
 #index {
