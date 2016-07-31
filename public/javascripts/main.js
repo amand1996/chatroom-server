@@ -8,4 +8,9 @@ $(document).ready(function() {
     socket.on('message', function(msg) {
         $('#messages').append($('<li>').text(msg));
     });
+    $('#enter').on('click', function(){
+        $('#user').hide();
+        $('#index').show();
+        return false;
+    });
 });

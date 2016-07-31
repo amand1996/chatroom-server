@@ -1,17 +1,18 @@
-#main_div{
-	background-image: url(../images/friends.jpg);
+#main_div {
+    background-image: url(../images/friends.jpg);
     background-size: cover;
-    height:100%;
-    width:100%;
-    position:fixed;
+    height: 100%;
+    width: 100%;
+    position: fixed;
 }
 
 a {
     color: #00B7FF;
 }
 
-div>h1,
-body>h1 {
+
+div>div>h1,
+body>div>div>h1,body>div>h1 {
     color: white;
     font-family: 'Cabin Sketch', cursive;
 }
@@ -99,14 +100,15 @@ body>h1 {
     position: fixed;
     top: 0px;
 }
-#user-name:focus{
-	background-color:rgba(0, 0, 0, 0.58);
-	color: whitesmoke;
 
+#user-name:focus {
+    background-color: rgba(0, 0, 0, 0.58);
+    color: whitesmoke;
 }
-#user-name{
-	background-color:rgba(0, 0, 0, 0.40);
-	color: whitesmoke;
+
+#user-name {
+    background-color: rgba(0, 0, 0, 0.40);
+    color: whitesmoke;
 }
 
 #chat-area {
@@ -114,4 +116,12 @@ body>h1 {
     padding-top: 0px;
     padding-bottom: 0px;
     margin-bottom: 0px;
+}
+
+#index {
+    display: none;
+}
+
+#user {
+    display: block;
 }

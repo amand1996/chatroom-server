@@ -16,16 +16,28 @@
 </head>
 
 <body>
-    <div id="main_div"></div>
-    <div id="chat-area">
-        <h1 id="welcome_title">Welcome to the Chatterbox</h1>
-        <div id="msg-container">
-            <ul id="messages"></ul>
+    <div id="index" hide>
+        <div id="main_div"></div>
+        <div id="chat-area">
+            <h1 id="welcome_title">Welcome to the Chatterbox</h1>
+            <div id="msg-container">
+                <ul id="messages"></ul>
+            </div>
+            <form role="form" class="form-inline" id="newMessageForm" action="">
+                <input class="form-control" placeholder="Type here..." id="newMessage" autocomplete="off" />
+                <button class="btn btn-success" type="submit" id="submitMessage">Send</button>
+            </form>
         </div>
-        <form role="form" class="form-inline" id="newMessageForm" action="">
-            <input class="form-control" placeholder="Type here..." id="newMessage" autocomplete="off" />
-            <button class="btn btn-success" type="submit" id="submitMessage">Send</button>
-        </form>
+    </div>
+    <div id="user">
+        <div id="main_div"></div>
+        <div id="welcome-page">
+            <h1 id="welcome_title" align="center">Chatterbox</h1>
+            <form role="form" action="chat">
+                <input class="form-control" id="user-name" type="text" autocomplete="off" placeholder="Enter your name here" />
+                <button class="btn btn-primary" id="enter" align="center" type="submit">Enter Chatroom</button>
+            </form>
+        </div>
     </div>
 </body>
 
