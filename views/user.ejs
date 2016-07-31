@@ -4,6 +4,7 @@
     <title>Chatterbox</title>
     <link rel="stylesheet" href="/stylesheets/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Cabin+Sketch:700" rel="stylesheet">
     <script src="/socket.io/socket.io.js"></script>
     <script type="text/javascript" src="/javascripts/main.js"></script>
     <!-- Latest compiled and minified CSS -->
@@ -16,10 +17,10 @@
 
 <body>
     <div id="welcome-page">
-        <h1 id="welcome_title" style="text-align: center;">Chatterbox</h1>
+        <h1 id="welcome_title" align="center">Chatterbox</h1>
         <form role="form" action="chat">
-            <input class="form-control" id="user-name" style="background-color:rgba(0, 0, 0, 0);" placeholder="Enter your name here" />
-            <button class="btn btn-success" id="enter" align="center" type="submit">Enter</button>
+            <input class="form-control" id="user-name" type="text" autocomplete="off" placeholder="Enter your name here" />
+            <button class="btn btn-primary" id="enter" align="center" type="submit">Enter Chatroom</button>
         </form>
     </div>
 </body>
